@@ -163,7 +163,7 @@ function ajustarTamañoCanvas() {
             //   ctx.lineTo(170, 15);
             ctx.stroke();
         };
-        img.src = "../assets/images/Rectangle 7.png";
+        img.src = "assets/images/Rectangle 7.png";
     }
 
     draw()
