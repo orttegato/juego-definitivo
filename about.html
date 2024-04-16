@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapito Game</title>
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+    <script src="app/home.js"></script>
+    <script src="app/orientacion.js"></script>
+
+
+</head>
+
+<body>    
+    <audio id="audioElement" src="/assets/audio/music.mp3" preload="auto"></audio>
+    
+    <div id="rotateAlert" class="alerta-rotar">
+        <p>Por favor, gira tu dispositivo a horizontal para jugar.</p>
+    </div>
+
+    <div class="body-container">
+        <div class="menu-arriba">
+            <div class="menu-botones">
+                <button class="boton"><a href="index.html">
+                        <p>HOME</p>
+                    </a></button>
+                    <button id="musicButton" class="boton-music-blanco" onclick="toggleAudio()"><p>MUSIC</p></button>
+            </div>
+        </div>
+
+            <div class="container-about">
+                <div class="container-text">
+                    <p>This game has been carefully designed with the fundamental purpose of generating a deeper
+                        understanding of the challenges faced by those struggling with mental health issues. Through a
+                        combination of narrative and metaphorical games, it seeks to educate, raise awareness, and
+                        provide practical strategies to confront these challenges. <br><br>
+
+                        Each challenge in the game symbolizes a common internal struggle experienced by individuals
+                        facing mental health problems. From representing anxiety as an obstacle to be overcome to
+                        depicting mazes symbolizing mental confusion, every element of the game is designed to reflect
+                        and symbolize the emotional complexities involved in this battle.<br><br>
+
+                        The purpose of "Mente en Equilibrio" is not only to provide entertainment but also to create a
+                        safe space where players can explore and better understand the realities of mental health. By
+                        playing this game, participants will have the opportunity to gain a more empathetic and
+                        understanding perspective towards those grappling with these challenges in their daily lives.
+                    </p>
+                    </div>
+                <div class="link">
+                    <p>If you need any help, please contact <b><a href="https://www.nimh.nih.gov/health/find-help"  target="_blank" >HERE</a></b>
+                    </p>
+                </div>
+            </div>
+
+    </div>
+
+    <script src="app/audio.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trapito Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/sass/rotate/turbine.css">
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+    <script src="app/orientacion.js"></script>
+</head>
+
+<body>
+    <audio id="audioElement" src="/assets/audio/music.mp3" preload="auto"></audio>
+    
+    <div id="rotateAlert" class="alerta-rotar">
+        <p>Por favor, gira tu dispositivo a horizontal para jugar.</p>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Great! You passed the game</p>
+            <div class="botones-popup">
+                <button class="boton" id="continueButton"> <a href="final.html">
+                    <p>CONTINUE</p>
+                </a> </button>
+                <button class="boton"><a href="index.html">
+                        <p>MENU</p>
+                    </a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="menu-arriba">
+            <div class="menu-botones">
+                <button class="boton"><a href="index.html">
+                        <p>HOME</p>
+                    </a></button>
+                    <button id="musicButton" class="boton-music-blanco" onclick="toggleAudio()"><p>MUSIC</p></button>
+            </div>
+            <div class="contador-container">
+                <h1 id="contador">15</h1>
+                <button id="detenerBtn" class="boton">
+                    <p>STOP</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="recuadro">
+                        <img width="78%" height="auto" id="example1" src="/assets/images/muñeco.png" alt="ilustracion juego2">
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="/app/game2.js"></script>
+    <script>
+        new Propeller(document.getElementById('example1'), { inertia: 0 });
+    </script>
+        <script src="app/audio.js"></script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>

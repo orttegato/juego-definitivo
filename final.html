@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapito Game</title>
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+    <script src="app/home.js"></script>
+    <script src="app/orientacion.js"></script>
+
+
+</head>
+
+<body>
+    <audio id="audioElement" src="/assets/audio/music.mp3" preload="auto"></audio>
+
+    <div id="rotateAlert" class="alerta-rotar">
+        <p>Por favor, gira tu dispositivo a horizontal para jugar.</p>
+    </div>
+
+    <div class="body-container">
+        <div class="menu-arriba">
+            <div class="menu-botones">
+                <button class="boton"><a href="index.html">
+                        <p>HOME</p>
+                    </a></button>
+                <button id="musicButton" class="boton-music-blanco" onclick="toggleAudio()">
+                    <p>MUSIC</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="container-final">
+            <p>Congratulations! <br> You finished the demo! <br> Stay tuned for more updates</p>
+        </div>
+
+    </div>
+    <script src="app/audio.js"></script>
+
+</body>
+
+</html>

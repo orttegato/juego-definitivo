@@ -1,0 +1,440 @@
+@font-face {
+  font-family: 'MyUglyHandwriting-Regular';
+  src: url('/assets/fonts/MyUglyHandwriting-Regular.otf') format('opentype');
+  /* Cambia la ruta según donde tengas almacenada tu fuente */
+  /* Puedes agregar más formatos de fuente aquí, si tienes disponibles */
+}
+
+.alerta-rotar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding-top: 50vh;
+  box-sizing: border-box;
+  z-index: 11000;
+
+  p {
+    font-size: 30px;
+  }
+}
+
+body {
+  margin: 5rem;
+  font-family: 'MyUglyHandwriting-Regular';
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.body-container {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 500px;
+    top: 40px;
+    position: fixed;
+    gap: 5px;
+  }
+}
+
+#canvas {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 500px;
+  width: 800px;
+}
+
+@media screen and (max-width: 700px) {
+  #canvas {
+    height: 300px;
+    width: 500px;
+  }
+}
+
+.container-fondo {
+  img {
+    border: 3px solid black;
+    height: 500px;
+    width: 800px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-fondo img {
+    height: 300px;
+    width: 500px;
+  }
+}
+
+.container-fondo-home {
+  z-index: 0;
+
+  img {
+    border: 3px solid black;
+    height: 500px;
+    width: 800px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-fondo-home img {
+    height: 300px;
+    width: 500px;
+    top: 33px;
+    position: fixed;
+  }
+}
+
+
+.abajo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.contador-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+#contador {
+  z-index: 2;
+}
+
+.menu-arriba {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 800px;
+}
+
+@media screen and (max-width: 700px) {
+  .menu-arriba {
+    width: 500px;
+  }
+}
+
+.menu-botones {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+
+/* Estilos para la ventana emergente */
+.popup {
+  display: none;
+  position: fixed;
+  /* Posición fija para que esté encima de todo */
+  top: 50%;
+  left: 50%;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: white;
+  padding: 12px;
+  height: 120px;
+  z-index: 999;
+  /* Asegura que esté encima de todo */
+}
+
+.popup-inicial {
+  display: flex;
+  position: fixed;
+  /* Posición fija para que esté encima de todo */
+  top: 50%;
+  left: 50%;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: white;
+  padding: 12px;
+  height: 120px;
+  z-index: 999;
+  /* Asegura que esté encima de todo */
+}
+
+.popup-content {
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    color: black;
+  }
+
+  .botones-popup {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+.recuadro {
+  display: flex;
+  border: 3px solid black;
+  height: 450px;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .recuadro {
+    height: 300px;
+    width: 500px;
+  }
+}
+
+.home {
+
+  .container-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .abajo-menu {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .botones-inicio-menu {
+      top: 120px;
+      left: 800px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1;
+      width: 160px;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home .container-home .botones-inicio-menu {
+    width: 80px;
+    top: 65px;
+    left: 350px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home .container-home {
+    display: block;
+  }
+}
+
+
+.abajo-comic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: .5rem;
+
+  img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .abajo-comic img{
+    width: 150px;
+    height: 100px;
+  }
+}
+
+.container-final {
+  width: 800px;
+  height: 500px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    width: 350px;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-final {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+.container-about {
+  width: 800px;
+  height: 500px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    width: 580px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .link {
+    p {
+      width: 550px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-about {
+    width: 500px;
+    height: 300px;
+
+    p {
+      width: 400px;
+      font-size: 12px;
+    }
+  }
+
+  .container-about .link {
+    p{
+      font-size: 15px;
+    }
+  }
+}
+
+
+/* BOTONES */
+.boton {
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-family: 'MyUglyHandwriting-Regular';
+  font-weight: bolder;
+  font-size: 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .boton {
+    font-size: 12px;
+    height: 20px;
+    padding: 8px;
+  }
+}
+
+.boton-music-blanco {
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-family: 'MyUglyHandwriting-Regular';
+  font-weight: bolder;
+  font-size: 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .boton-music-blanco {
+    font-size: 12px;
+    height: 20px;
+    padding: 8px;
+  }
+}
+
+.boton-music-negro {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-family: 'MyUglyHandwriting-Regular';
+  font-weight: bolder;
+  font-size: 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .boton-music-negro {
+    font-size: 12px;
+    height: 20px;
+    padding: 8px;
+  }
+}
+
+
+.boton:hover {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
+.boton:hover p {
+  color: white;
+}
+
+.botones-inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .boton {
+    display: flex;
+    justify-content: center;
+    width: 160px;
+  }
+}

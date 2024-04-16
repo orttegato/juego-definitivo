@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo canvas</title>
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+    <script src="app/game1.js"></script>
+    <script src="app/home.js"></script>
+    <script src="app/orientacion.js"></script>
+
+</head>
+
+<body>
+    <audio id="audioElement" src="/assets/audio/music.mp3" preload="auto"></audio>
+    
+    <div id="rotateAlert" class="alerta-rotar">
+        <p>Por favor, gira tu dispositivo a horizontal para jugar.</p>
+    </div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Great! You passed the game</p>
+            <div class="botones-popup">
+                <button class="boton" id="continueButton"><p>CONTINUE</p></a></button>
+                <button class="boton"><a href="index.html"><p>MENU</p></a></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="body-container">
+        <div class="menu-arriba">
+            <div class="menu-botones">
+                <button class="boton"><a href="index.html"><p>HOME</p></a></button>
+                <button id="musicButton" class="boton-music-blanco" onclick="toggleAudio()"><p>MUSIC</p></button>
+            </div>
+            <div class="contador-container">
+                <h1 id="contador">20</h1>
+                <button id="detenerBtn" class="boton"><p>STOP</p></button>
+            </div>
+        </div>
+
+
+        <div id="contenidoInicial" class="abajo">
+            <canvas id="canvas"></canvas>
+            <div class="container-fondo">
+                <img src="/assets/images/1.jpeg" alt="ilustracion juego1">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app/audio.js"></script>
+</body>
+
+</html>
